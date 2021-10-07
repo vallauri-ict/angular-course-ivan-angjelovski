@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
+
+// istanziazione eseguita in automatico con tag <app-studenti>
 export class StudentComponent implements OnInit {
 
   studentList = [

@@ -49,15 +49,23 @@
   <!-- [(binding bidirezionale)] -->
   <input type="text" id="txtName" #txtName [(ngModel)]="studentName">
 
-  <div class="custom-control custom-radio">
-    <input id="male" type="radio" value="M" name="gender" [(ngModel)]="studentGender">
-    <label for="male">Male</label>
-  </div>
+  <div class="gender-selection">
+    <div>
+      <input id="male" type="radio" value="M" name="gender" [(ngModel)]="studentGender">
+      <label for="male">Male</label>
+    </div>
 
-  <div class="custom-control custom-radio">
-    <input id="female" type="radio" value="F" name="gender" [(ngModel)]="studentGender">
-    <label for="female">Female</label>
+    <div>
+      <input id="female" type="radio" value="F" name="gender" [(ngModel)]="studentGender">
+      <label for="female">Female</label>
+    </div>
   </div>
+  
+  <select class="hobby-selection" [(ngModel)]="studentHobby">
+    <option *ngFor="let hobby of hobbies" [value]="hobby">
+      {{ hobby }}
+    </option>
+  </select>
 
   <button [disabled]="studentName.length == 0" (click)="onAddStudent()">ADD STUDENT</button>
   

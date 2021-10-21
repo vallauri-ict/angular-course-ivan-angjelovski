@@ -16,13 +16,25 @@ button {
     color: whitesmoke;
     font-weight: 600;
     padding: 20px;
-    margin: 20px auto;
+    margin: 16px auto;
     border: none;
     border-radius: 6px;
 }
 
 button:disabled {
     background-color: darkgray;
+}
+
+.gender-selection {
+    margin: 10px auto;
+}
+
+.gender-selection > div {
+    display: inline-block;
+}
+
+.hobby-selection {
+    width: 100px;
 }
 
 .student {

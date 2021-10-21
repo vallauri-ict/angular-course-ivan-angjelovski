@@ -43,7 +43,26 @@
 
   </div>
 
+
+  <h2>Add Student:</h2>
+  <label for="txtName">Student Name:</label>
+  <!-- [(binding bidirezionale)] -->
+  <input type="text" id="txtName" #txtName [(ngModel)]="studentName">
+
+  <div class="custom-control custom-radio">
+    <input id="male" type="radio" value="M" name="gender" [(ngModel)]="studentGender">
+    <label for="male">Male</label>
+  </div>
+
+  <div class="custom-control custom-radio">
+    <input id="female" type="radio" value="F" name="gender" [(ngModel)]="studentGender">
+    <label for="female">Female</label>
+  </div>
+
+  <button [disabled]="studentName.length == 0" (click)="onAddStudent()">ADD STUDENT</button>
+  
   <h2>The Students:</h2>
+
   <!-- <div *ngFor="let item of studentList">
     {{ item.name }} - {{ item.hobby }}
   </div> -->

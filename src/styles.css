@@ -3,3 +3,26 @@
     cursor: pointer;
     padding: 4px 10px;
 }
+
+button {
+    background-color: #1976d2;
+    color: whitesmoke;
+    font-weight: 600;
+    padding: 20px;
+    margin: 16px auto;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button.delete {
+    background-color: tomato;
+    margin-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: firebrick;
+}
+
+button:disabled {
+    background-color: darkgray;
+}

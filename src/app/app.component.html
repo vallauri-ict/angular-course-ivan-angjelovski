@@ -78,8 +78,9 @@
   <!-- <app-student *ngFor="let item of studentList" [student]="item"></app-student> -->
   <div class="student" *ngFor="let item of studentList; let i = index">
     <span>{{ i + 1 }} => </span>
-    <app-student [student]="item"></app-student>
-    <button class="delete" (click)="onDeleteStudent(i)">Delete</button>
+    <!-- $event fa sì che venga passata a onStudentDeleteEvent il parametro che passiamo nell'EventEmitter -->
+    <app-student [student]="item" (studentDeleteEvent)="onStudentDeleteEvent($event)"></app-student>
+    <!-- <button class="delete" (click)="onDeleteStudent(i)">Delete</button> -->
   </div>
 
 </div>

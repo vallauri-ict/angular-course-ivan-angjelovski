@@ -11,27 +11,6 @@ h1, h2, h3, h4, h5, h6, .student {
     margin: 8px 0;
 }
 
-button {
-    background-color: #1976d2;
-    color: whitesmoke;
-    font-weight: 600;
-    padding: 20px;
-    margin: 16px auto;
-    border: none;
-    border-radius: 6px;
-}
-
-button.delete {
-    background-color: red;
-    margin-left: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-button:disabled {
-    background-color: darkgray;
-}
-
 .gender-selection {
     margin: 10px auto;
 }

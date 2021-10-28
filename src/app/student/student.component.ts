@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-student',
@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 // istanziazione eseguita in automatico con tag <app-studenti>
 export class StudentComponent implements OnInit {
   @Input()student:any;
+  @Output() studentDeleteEvent = new EventEmitter<any>();
 
   constructor() {
     
@@ -25,5 +26,9 @@ export class StudentComponent implements OnInit {
 
   onStudentClick() {
     this.student.isPro = !this.student.isPro;
+  }
+
+  onDeleteStudent() {
+    this.studentDeleteEvent.emit(this.student);
   }
 }

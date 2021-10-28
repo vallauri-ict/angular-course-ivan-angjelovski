@@ -29,7 +29,8 @@ export class AppComponent {
     "Paddle",
     "Volley",
     "Tennis",
-    "Lifting"
+    "Lifting",
+    "Basket"
   ];
 
   studentList:any[] = [];
@@ -54,5 +55,9 @@ export class AppComponent {
     this.studentList.push(newStudent);
     this.studentName = "";
     this.txtName.nativeElement.focus();
+  }
+
+  onDeleteStudent(index:number) {
+    this.studentList.splice(index, 1);
   }
 }

@@ -46,7 +46,7 @@
 
   <h2>Add Student:</h2>
   <label for="txtName">Student Name:</label>
-  <!-- [(binding bidirezionale)] -->
+  <!-- [(binding bidirezionale)], prende e manda, se ci sono solo le [] prende solo -->
   <input type="text" id="txtName" #txtName [(ngModel)]="studentName">
 
   <div class="gender-selection">
@@ -79,6 +79,7 @@
   <div class="student" *ngFor="let item of studentList; let i = index">
     <span>{{ i + 1 }} => </span>
     <app-student [student]="item"></app-student>
+    <button class="delete" (click)="onDeleteStudent(i)">Delete</button>
   </div>
 
 </div>
